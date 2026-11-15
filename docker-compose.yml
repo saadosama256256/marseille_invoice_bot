@@ -1,0 +1,10 @@
+
+services:
+  marseille-invoice-bot:
+    build: .
+    container_name: marseille-invoice-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
